@@ -1,10 +1,13 @@
 <div align="center">
 
+<img src="img/icon.png" width="128" alt="WangmiaoGit">
+
 # WangmiaoGit
 
 **轻量、原生的 macOS Git 图形客户端**
 
-基于 SwiftUI 构建，不内置浏览器运行时，不需要 WangmiaoGit 账户，不收集遥测数据。
+基于 SwiftUI 构建，不内置浏览器运行时，不需要 WangmiaoGit 账户，不收集遥测数据。  
+直接使用系统已安装的 `git`，SSH 密钥、凭据助手、Git 配置和 Hooks 均可继续沿用。
 
 [![Release](https://img.shields.io/github/v/release/wangmiaozero/WangmiaoGit?color=blue)](https://github.com/wangmiaozero/WangmiaoGit/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/wangmiaozero/WangmiaoGit/total?color=blue)](https://github.com/wangmiaozero/WangmiaoGit/releases)
@@ -17,11 +20,9 @@
 
 ## 项目介绍
 
-WangmiaoGit 是一款面向 macOS 的原生 Git 客户端。它直接调用系统中已经安装的
-`git`，因此终端里已有的 SSH 密钥、凭据助手、Git 配置和 Hooks 都可以继续使用。
+WangmiaoGit 是一款面向 macOS 的原生 Git 客户端。它直接调用系统中已经安装的 `git`，因此终端里已有的 SSH 密钥、凭据助手、Git 配置和 Hooks 都可以继续使用。
 
-应用覆盖日常 Git 工作流，并通过原生界面提供提交图、文件差异、分支管理、暂藏、
-工作树、子模块和冲突处理等能力。
+应用覆盖日常 Git 工作流，并通过原生界面提供提交图、文件差异、分支管理、暂藏、工作树、子模块和冲突处理等能力。
 
 ## 核心功能
 
@@ -34,31 +35,43 @@ WangmiaoGit 是一款面向 macOS 的原生 Git 客户端。它直接调用系�
 - **可选 AI 能力**：按需生成提交说明或 Pull Request 文案，服务商和接口地址由用户配置。
 - **原生体验**：SwiftUI + AppKit、系统深浅色外观、键盘导航和界面缩放。
 
-## 安装
+## 界面预览
 
-1. 从 [GitHub Releases](https://github.com/wangmiaozero/WangmiaoGit/releases/latest)
-   下载最新 DMG。
-2. 打开 DMG，将 WangmiaoGit 拖入“应用程序”文件夹。
-3. 首次启动后，通过“文件 → 打开仓库”选择本地 Git 仓库。
+### 仓库仪表盘
 
-当前公开版本尚未经过 Apple 公证。如果 macOS 阻止首次启动，请前往
-“系统设置 → 隐私与安全性”，选择“仍要打开”。
+活动热力图、提交趋势与多仓库入口。
 
-## 可选工具
+| 浅色 | 深色 |
+| :---: | :---: |
+| <img src="img/5.png" width="480" alt="仪表盘 · 浅色"> | <img src="img/6.png" width="480" alt="仪表盘 · 深色"> |
 
-WangmiaoGit 的基础 Git 功能无需额外安装工具。以下功能需要相应命令行程序：
+### 提交历史与工作区
 
-| 工具 | 用途 |
-|---|---|
-| [`git-lfs`](https://git-lfs.com) | Git LFS 状态、文件追踪、指针预览和对象下载 |
-| [`gh`](https://cli.github.com) | GitHub Pull Request 与 Issue |
-| [`glab`](https://gitlab.com/gitlab-org/cli#installation) | GitLab Merge Request、Issue 和实例头像 |
+彩色提交图、分支 / 标签、暂存区与提交面板。
 
-## 隐私与网络
+| 浅色 | 深色 |
+| :---: | :---: |
+| <img src="img/4.png" width="480" alt="提交历史 · 浅色"> | <img src="img/3.png" width="480" alt="提交历史 · 深色"> |
 
-WangmiaoGit 不收集遥测数据。网络访问仅发生在功能本身需要联网时，包括访问 Git
-远程仓库、检查 GitHub Release 更新、运行用户触发的 `gh`/`glab` 命令、请求用户配置的
-AI 服务，以及可选的作者头像查询。AI API Key 存储在 macOS 登录钥匙串中。
+### 开始使用
+
+未打开仓库时的空状态。
+
+| 浅色 | 深色 |
+| :---: | :---: |
+| <img src="img/2.png" width="480" alt="空状态 · 浅色"> | <img src="img/1.png" width="480" alt="空状态 · 深色"> |
+
+## 隐私与安全
+
+WangmiaoGit 不收集遥测数据，不要求注册账户。网络访问仅发生在功能本身需要联网时，包括：
+
+- 访问 Git 远程仓库
+- 检查 GitHub Release 更新
+- 运行用户触发的 `gh` / `glab` 命令
+- 请求用户自行配置的 AI 服务
+- 可选的作者头像查询
+
+AI API Key 存储在 macOS 登录钥匙串中，不会上传到 WangmiaoGit 服务端（本应用也没有服务端）。
 
 ## 系统要求
 
